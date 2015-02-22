@@ -1,0 +1,25 @@
+<div class="jumbotron" >  
+    <h2>List of my Favorite Orchids</h2>  
+</div>  
+<div class="jumbotron">    
+ 
+        <ul  class="list-group">                
+            <li data-ng-repeat="Orchid in OrchidsList" class="list-group-item">   
+                 <div >                         
+                        
+                 <img src="/Contents/Images/{{Orchid.MainPicture}}" alt="{{Orchid.Title}}" title="{{Orchid.Title}}"  > <br />           
+                    <span >{{Orchid.BlogID}}  .  {{Orchid.Title | uppercase}} <br />
+                            {{Orchid.Text}}   {{Orchid.DatePosted | date }}
+                    </span>  
+                 </div>
+            </li>             
+        </ul>
+        <div class="panel panel-default">      
+            <div class="panel-body | centered">
+                <button data-ng-click="fnShowOrchids(-1)" class="btn btn-default  btn-lg" ><<<<</button>
+                <input type="number" data-ng-model="pageSize" max="4" min="1" value="2" class="select"/>
+                <button data-ng-click="fnShowOrchids(1)" class="btn btn-default  btn-lg" >>>>></button>
+            </div> 
+        </div> 
+    <a href="#/add">Add your Favorite Flowers</a>
+</div>
